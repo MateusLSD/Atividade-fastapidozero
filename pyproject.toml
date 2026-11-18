@@ -1,8 +1,18 @@
 [project]
 name = "hello-world"
 version = "0.1.0"
-description = "Projeto inicial Hello World em Python"
+description = "Projeto inicial FastAPI para CRUD de usuários"
 requires-python = ">=3.10"
+dependencies = [
+    "fastapi>=0.115",
+    "uvicorn[standard]>=0.30",
+]
+
+[project.optional-dependencies]
+test = [
+    "httpx>=0.27",
+    "pytest>=8",
+]
 
 [tool.pytest.ini_options]
 testpaths = ["teste"]
